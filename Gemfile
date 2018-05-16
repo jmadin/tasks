@@ -10,6 +10,9 @@ gem 'capistrano-passenger', '~> 0.2.0'
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', '~> 2.1'
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
