@@ -4,12 +4,12 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    # @tasks = Task.all
+    @tasks = Task.all
 
-    @search = Task.search do
-      fulltext params[:search]
-    end
-    @tasks = @search.results
+    # @search = Task.search do
+    #   fulltext params[:search]
+    # end
+    # @tasks = @search.results
 
   end
 
