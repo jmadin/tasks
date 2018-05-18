@@ -1,15 +1,24 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
+  def search
+    query = params[:search_tasks].presence && params[:search_tasks][:query]
+
+    if query
+      @tasks = Task.search_published(query)
+    end
+  end
+
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    # @tasks = Task.all
 
-    # @search = Task.search do
-    #   fulltext params[:search]
-    # end
-    # @tasks = @search.results
+    if params[:search] and not params[:search].blank?
+      @tasks = Task.search( params[:search] ).records
+    else
+      @tasks = Task.all
+    end
 
   end
 
