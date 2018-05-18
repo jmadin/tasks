@@ -10,10 +10,8 @@ gem 'capistrano-passenger', '~> 0.2.0'
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', '~> 2.1'
 
-# gem 'sunspot_rails'
-# gem 'sunspot_solr'
-# gem 'progress_bar'
-
+# 
+gem 'capistrano-chewy', require: false
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 

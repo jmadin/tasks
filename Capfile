@@ -12,6 +12,8 @@ require 'capistrano/rbenv'
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1'
 
+require 'capistrano/chewy'
+
 
 # Load the SCM plugin appropriate to your project:
 #
