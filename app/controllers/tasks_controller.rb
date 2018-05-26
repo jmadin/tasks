@@ -14,11 +14,17 @@ class TasksController < ApplicationController
   def index
     # @tasks = Task.all
 
-    if params[:search] and not params[:search].blank?
-      @tasks = Task.search( params[:search] ).records
-    else
-      @tasks = Task.all
+    # if params[:search] and not params[:search].blank?
+    #   @tasks = Task.search( params[:search] )
+    # else
+    #   @tasks = Task.all
+    # end
+
+
+    @search = Task.search do
+      fulltext params[:search]      
     end
+    @tasks = @search.results
 
   end
 
