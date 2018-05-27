@@ -9,6 +9,8 @@ gem 'capistrano-passenger', '~> 0.2.0'
 
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'progress_bar'
+
 gem 'capistrano-sunspot'
 
 # Add this if you're using rbenv
